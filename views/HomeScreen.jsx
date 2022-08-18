@@ -11,7 +11,7 @@ export default function HomeScreen({navigation}) {
       />
       <Button      
         title="Go to Profile"
-        onPress={() => navigation.navigate('Profile')}
+        onPress={() => navigation.navigate('Profile', {name: "Segismundo"})}
       />
     </View>
   );

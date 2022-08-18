@@ -1,9 +1,10 @@
 import * as React from 'react';
-import DetailsScreen from './Views/DetailsScreen';
-import HomeScreen from './Views/HomeScreen';
-import ProfileScreen from './Views/ProfileScreen';
+import DetailsScreen from './views/DetailsScreen';
+import HomeScreen from './views/HomeScreen';
+import ProfileScreen from './views/ProfileScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 
 const Stack = createNativeStackNavigator();
