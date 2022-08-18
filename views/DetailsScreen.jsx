@@ -1,12 +1,13 @@
-import { View, Text, Button} from 'react-native';
+import { View, Text, Image,TouchableNativeFeedback} from 'react-native';
+
 export default function DetailsScreen({navigation}) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Details Screen</Text>
-      <Button
-        title="Go to Home"
-        onPress={() => navigation.navigate('Home')}
-      />
+      <TouchableNativeFeedback onPress={() => navigation.navigate('Home')}>
+      <Image 
+      source={require('../assets/home.png')}/>
+      </TouchableNativeFeedback>      
     </View>
   );
 }
