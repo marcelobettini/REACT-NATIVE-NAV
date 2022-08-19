@@ -6,6 +6,10 @@ export const styles = StyleSheet.create({
   mb: {
     marginBottom: 10
   },
+  tabIcon:{
+    width: 40,
+    height: 40
+  }
   
 });
 
