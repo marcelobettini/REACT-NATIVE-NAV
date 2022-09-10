@@ -4,15 +4,14 @@ import HomeScreen from './views/HomeScreen';
 import ProfileScreen from './views/ProfileScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Text } from 'react-native';
+
 
 const Stack = createNativeStackNavigator();
 
 function App() {
-  
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator screenOptions={{ headerLargeTitle: true }} initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Config" component={ConfigScreen} />
         <Stack.Screen name="Profile" component={ProfileScreen} />

@@ -7,15 +7,26 @@ const useFetch = (url) => {
 
   const getData = (url) => {
     fetch(url)
-      .then(res => res.json(),
-        err => {
-          throw err
-        })
-      .then(data => setData(data))
-      .catch(err => setError(err))
-      .finally(
-        setTimeout(() => setIsLoading(false), 2000)
-      )
+      .then(res => {
+        if (!res.ok) {          
+          console.log(res.status);
+          throw new Error(`Error: ${res.status}`)
+        }        
+        return res.json()
+      })
+      .then(data => {
+        setData(data);
+        setIsLoading(false);
+      })
+      .catch(err => {
+        setError(err.message)
+        setIsLoading(false)
+        setTimeout(()=> setError(null),3000)
+      
+      })
+      
+
+
   }
   useEffect(() => {
     getData(url)
